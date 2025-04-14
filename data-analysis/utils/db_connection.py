@@ -1,4 +1,4 @@
-import psycopg2
+import psycopg
 from contextlib import contextmanager
 
 DB_URL = "postgres://sy91dhb:g5t49ao@178.156.142.230:5432/hd64m1ki"
@@ -8,7 +8,7 @@ DB_URL = "postgres://sy91dhb:g5t49ao@178.156.142.230:5432/hd64m1ki"
 def get_connection():
     conn = None
     try:
-        conn = psycopg2.connect(DB_URL)
+        conn = psycopg.connect(DB_URL)
         yield conn
     finally:
         if conn is not None:

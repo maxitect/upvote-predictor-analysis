@@ -81,7 +81,7 @@ def analyze_time_patterns():
     daily_scores.columns = ['avg_score', 'median_score', 'post_count']
     daily_scores = daily_scores.reset_index()
     daily_scores['day_name'] = daily_scores['day_of_week'].apply(
-        lambda x: day_names[x])
+        lambda x: day_names[int(x)])
 
     print("\nScores by day of week:")
     print(daily_scores)

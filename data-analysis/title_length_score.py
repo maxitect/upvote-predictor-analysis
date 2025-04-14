@@ -7,7 +7,7 @@ from utils.db_connection import get_cursor
 def analyze_title_length_vs_score():
     query = """
     SELECT title, score
-    FROM items
+    FROM hacker_news.items
     WHERE type = 'story' AND title IS NOT NULL
     """
 

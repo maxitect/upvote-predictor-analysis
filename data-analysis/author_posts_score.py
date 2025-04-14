@@ -7,10 +7,10 @@ from utils.db_connection import get_cursor
 def analyze_author_activity_vs_score():
     query = """
     WITH author_post_count AS (
-        SELECT 
-            "by" as author, 
+        SELECT
+            "by" as author,
             COUNT(*) as post_count
-        FROM items
+        FROM hacker_news.items
         WHERE type = 'story' AND "by" IS NOT NULL
         GROUP BY "by"
     )

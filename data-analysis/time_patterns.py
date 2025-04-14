@@ -1,13 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from datetime import datetime
 from utils.db_connection import get_cursor
 
 
 def analyze_time_patterns():
     query = """
-    SELECT time, score
+    SELECT time, score, title
     FROM hacker_news.items
     WHERE type = 'story'
     """
@@ -16,9 +15,20 @@ def analyze_time_patterns():
         cursor.execute(query)
         results = cursor.fetchall()
 
-    df = pd.DataFrame(results, columns=['time', 'score'])
+    df = pd.DataFrame(results, columns=['time', 'score', 'title'])
 
-    df['datetime'] = df['time'].apply(lambda x: datetime.fromtimestamp(x))
+    # Check if time is already a datetime type
+    if not pd.api.types.is_datetime64_any_dtype(df['time']):
+        # If it's a Unix timestamp (integer), convert to datetime
+        if pd.api.types.is_integer_dtype(df['time']):
+            df['datetime'] = pd.to_datetime(df['time'], unit='s')
+        else:
+            # If it's another format, try standard conversion
+            df['datetime'] = pd.to_datetime(df['time'])
+    else:
+        # If it's already a datetime, just copy it
+        df['datetime'] = df['time']
+
     df['year'] = df['datetime'].dt.year
     df['month'] = df['datetime'].dt.month
     df['day_of_week'] = df['datetime'].dt.dayofweek

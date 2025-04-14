@@ -14,13 +14,13 @@ def analyze_author_activity_vs_score():
         WHERE type = 'story' AND "by" IS NOT NULL
         GROUP BY "by"
     )
-    
-    SELECT 
-        i."by" as author, 
-        apc.post_count, 
+
+    SELECT
+        i."by" as author,
+        apc.post_count,
         AVG(i.score) as avg_score,
         COUNT(*) as stories
-    FROM items i
+    FROM hacker_news.items i
     JOIN author_post_count apc ON i."by" = apc.author
     WHERE i.type = 'story'
     GROUP BY i."by", apc.post_count

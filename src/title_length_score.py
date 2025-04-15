@@ -4,7 +4,7 @@ import seaborn as sns
 from utils.db_connection import get_cursor
 
 
-def analyze_title_length_vs_score():
+def analyse_title_length_vs_score():
     query = """
     SELECT title, score
     FROM hacker_news.items
@@ -44,4 +44,4 @@ def analyze_title_length_vs_score():
 
 
 if __name__ == "__main__":
-    analyze_title_length_vs_score()
+    analyse_title_length_vs_score()

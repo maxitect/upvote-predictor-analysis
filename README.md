@@ -28,6 +28,7 @@ This project tests various hunches about factors that might influence the score 
 - `author_posts_score.py` - Analyses relationship between author activity and score
 - `domain_popularity.py` - Analyses relationship between domains and score
 - `time_patterns.py` - Analyses time-based patterns in scores
+- `karma_analysis.py` - Analyses relationship between user karma and score
 - `main.py` - Entry point for running analyses
 
 ## Usage
@@ -50,6 +51,7 @@ Available options:
 - `--author`: Analyze author activity vs score
 - `--domain`: Analyze domain popularity vs score
 - `--time`: Analyze time patterns vs score
+- `--karma`: Analyze user karma vs score
 
 ## Hunches Being Tested
 
@@ -67,8 +69,15 @@ Available options:
    - Checks if official news websites get better scores than blogs
 
 4. Are patterns in recent posts more indicative than older ones?
+
    - Analyzes score trends over time
    - Compares patterns between newer and older posts
+
+5. Does user karma affect post scores?
+
+   - Calculates linearly interpolated karma at post time
+   - Analyses correlation between karma and post scores
+   - Examines how the karma-score relationship changes over time
 
 ## Output
 

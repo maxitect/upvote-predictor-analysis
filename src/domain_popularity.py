@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from utils.db_connection import get_cursor
 
 
-def analyze_domain_popularity():
+def analyse_domain_popularity():
     query = """
     SELECT url, score
     FROM hacker_news.items

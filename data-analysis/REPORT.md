@@ -6,7 +6,7 @@
 
 - **Title Length**: Optimal range is 25-75 characters (13.5-16.5 avg score). Titles >100 characters perform significantly worse (5.5 avg score). Correlation is weakly negative (-0.01).
 
-- **Domain Quality**: Highly specialized technical/educational domains consistently outperform others. Top domain (ciechanow.ski) achieves 444 avg score vs platform average of 14.
+- **Domain Quality**: Highly specialised technical/educational domains consistently outperform others. Top domain (ciechanow.ski) achieves 444 avg score vs platform average of 14.
 
 - **Content Type**: News domains slightly outperform non-news (18 vs 15 avg score).
 

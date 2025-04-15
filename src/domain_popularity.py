@@ -84,4 +84,4 @@ def analyse_domain_popularity():
 
 
 if __name__ == "__main__":
-    analyze_domain_popularity()
+    analyse_domain_popularity()

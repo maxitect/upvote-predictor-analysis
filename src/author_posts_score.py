@@ -4,7 +4,7 @@ import seaborn as sns
 from utils.db_connection import get_cursor
 
 
-def analyze_author_activity_vs_score():
+def analyse_author_activity_vs_score():
     query = """
     WITH author_post_count AS (
         SELECT

@@ -4,7 +4,7 @@ import seaborn as sns
 from utils.db_connection import get_cursor
 
 
-def analyze_time_patterns():
+def analyse_time_patterns():
     query = """
     SELECT time, score, title
     FROM hacker_news.items
@@ -124,4 +124,4 @@ def calculate_correlations(df):
 
 
 if __name__ == "__main__":
-    analyze_time_patterns()
+    analyse_time_patterns()

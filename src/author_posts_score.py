@@ -67,4 +67,4 @@ def analyse_author_activity_vs_score():
 
 
 if __name__ == "__main__":
-    analyze_author_activity_vs_score()
+    analyse_author_activity_vs_score()

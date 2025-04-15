@@ -1,6 +1,6 @@
 # Project Overview
 
-In this project, we will try to predict the upvote score of posts on the [Hacker News website](https://news.ycombinator.com/) using just their titles.
+In this project, we will try to predict the upvote score of posts on the [Hacker News website](https://news.ycombinator.com/) using at least their titles.
 
 You are allowed (and recommended) to use PyTorch and its libraries.
 
